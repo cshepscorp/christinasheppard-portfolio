@@ -25,7 +25,7 @@ The site lives at **christinasheppard.com**, hosted via **AWS Amplify** with aut
 - `App.jsx` — landing page with name, one-liner, links (LinkedIn, GitHub, Email), "Portfolio in progress" footer note
 - No routing yet
 - No resume page yet
-- PDF resume to be added to `public/christy-sheppard-resume.pdf` (not yet added)
+- PDF resume lives at `public/christy_sheppard_resume.pdf` and is the canonical source of truth. Copy shown on the site is mirrored in `src/data/resume.js`; when the PDF changes, update that file and bump `RESUME_PDF_VERSION` for cache-busting (the version is appended to the download link as `?v=…`).
 
 ## Planned Page Structure
 - **`/` (home)** — landing page with summary, links, and a horizontal left-to-right career timeline (condensed cards). Clicking a timeline card navigates to `/resume`

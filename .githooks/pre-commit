@@ -1,0 +1,53 @@
+#!/bin/sh
+# ──────────────────────────────────────────────────────────────────────────
+# .githooks/pre-commit
+#
+# Auto-bumps RESUME_PDF_VERSION in src/data/resume.js whenever the resume
+# PDF is part of the staged changes. The version string is appended as a
+# query param to the download URL (?v=YYYY-MM-DD), so changing it busts
+# CDN / browser caches and visitors get the fresh PDF on next page load.
+#
+# One-time setup per clone:
+#   git config core.hooksPath .githooks
+#
+# To skip this hook for a single commit (rarely needed):
+#   git commit --no-verify
+# ──────────────────────────────────────────────────────────────────────────
+
+set -e
+
+PDF_PATH="public/christy_sheppard_resume.pdf"
+DATA_FILE="src/data/resume.js"
+
+# Only act if the PDF is in the staged changeset.
+if ! git diff --cached --name-only | grep -qx "$PDF_PATH"; then
+  exit 0
+fi
+
+if [ ! -f "$DATA_FILE" ]; then
+  echo "pre-commit: $DATA_FILE not found, skipping version bump." >&2
+  exit 0
+fi
+
+TODAY="$(date +%Y-%m-%d)"
+
+# Read current version so we don't churn the file on PDF-only commits made
+# the same day.
+CURRENT="$(grep -E "^export const RESUME_PDF_VERSION = " "$DATA_FILE" | sed -E "s/.*'([^']*)'.*/\1/")"
+
+if [ "$CURRENT" = "$TODAY" ]; then
+  echo "pre-commit: PDF changed, but RESUME_PDF_VERSION is already $TODAY — leaving as-is."
+  exit 0
+fi
+
+# Portable in-place edit (works on both BSD sed / macOS and GNU sed / Linux):
+# write to temp file, then move it back.
+TMP="$(mktemp)"
+sed "s/^export const RESUME_PDF_VERSION = '.*'/export const RESUME_PDF_VERSION = '$TODAY'/" \
+  "$DATA_FILE" > "$TMP"
+mv "$TMP" "$DATA_FILE"
+
+# Stage the bump so it's part of the same commit as the PDF.
+git add "$DATA_FILE"
+
+echo "pre-commit: PDF changed, bumped RESUME_PDF_VERSION → $TODAY"

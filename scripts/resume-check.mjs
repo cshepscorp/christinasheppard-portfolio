@@ -25,9 +25,9 @@ import { readFileSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 
-// pdf-parse exposes a debug entry at its package root that executes on
-// import and breaks in ESM. Importing the lib file directly avoids it.
-import pdfParse from 'pdf-parse/lib/pdf-parse.js'
+// pdf-parse v2 exports a PDFParse class. Construct with { data: Buffer }
+// and call .getText() — see https://www.npmjs.com/package/pdf-parse.
+import { PDFParse } from 'pdf-parse'
 
 import {
   SUMMARY,
@@ -53,18 +53,21 @@ if (!existsSync(PDF_PATH)) {
 function normalize(s) {
   return String(s)
     .toLowerCase()
-    .replace(/[\u2018\u2019]/g, "'")       // curly single quotes
-    .replace(/[\u201C\u201D]/g, '"')       // curly double quotes
+    .replace(/[\u2018\u2019]/g, "'")             // curly single quotes
+    .replace(/[\u201C\u201D]/g, '"')             // curly double quotes
     .replace(/[\u2013\u2014\u2010\u2011]/g, '-') // en/em/hyphen variants
-    .replace(/\u2122/g, '')                // ION™ → ion
+    .replace(/\u2122/g, '')                      // ION™ → ion
     .replace(/\s+/g, ' ')
+    .replace(/\s*-\s*/g, '-')                    // "1999 - 2003" → "1999-2003"
+    .replace(/^@/, '')                           // social handles: "@x" matches "x"
     .trim()
 }
 
 let pdfNorm = ''
 try {
   const pdfBuffer = readFileSync(PDF_PATH)
-  const { text } = await pdfParse(pdfBuffer)
+  const parser = new PDFParse({ data: new Uint8Array(pdfBuffer) })
+  const { text } = await parser.getText()
   pdfNorm = normalize(text)
 } catch (err) {
   console.error('[resume-check] Failed to parse PDF:', err.message)
@@ -90,13 +93,15 @@ for (const group of SKILLS) {
 }
 
 // ── CONTACT ──
-check('CONTACT.email',         CONTACT.email)
-check('CONTACT.location',      CONTACT.location)
-check('CONTACT.linkedin.label', CONTACT.linkedin.label)
-check('CONTACT.github.label',   CONTACT.github.label)
-check('CONTACT.site',          CONTACT.site)
+check('CONTACT.email',    CONTACT.email)
+check('CONTACT.location', CONTACT.location)
+check('CONTACT.site',     CONTACT.site)
 // phone is optional — only check if present
 if (CONTACT.phone) check('CONTACT.phone', CONTACT.phone)
+// CONTACT.linkedin.label and CONTACT.github.label are intentionally NOT
+// checked: in the PDF those appear as the words "LinkedIn" and "GitHub"
+// (hyperlink anchors), not as the @handles. The labels are display-only
+// conventions used by the JSON-style contact block on the website.
 
 // ── EXPERIENCE ──
 for (const role of EXPERIENCE) {

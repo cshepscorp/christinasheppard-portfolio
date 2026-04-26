@@ -20,7 +20,7 @@
 // ──────────────────────────────────────────────────────────────────────────
 
 // Bump this when you replace the PDF. Any string change invalidates caches.
-export const RESUME_PDF_VERSION = '2026-04-24'
+export const RESUME_PDF_VERSION = '2026-04-26'
 
 export const RESUME_PDF_PATH = `/christy_sheppard_resume.pdf?v=${RESUME_PDF_VERSION}`
 
@@ -44,8 +44,8 @@ export const SUMMARY =
   'stakeholders — serving as a primary technical liaison while shipping ' +
   'full-stack features across the entire product lifecycle. Most recently ' +
   'contributed to AI-powered development, including a Claude API-powered ' +
-  'conversational insurance interface and MCP-based backend integrations, ' +
-  'and am actively growing expertise in LLM integration as a direction for ' +
+  'conversational insurance interface and MCP-based backend integrations. ' +
+  'Actively pursuing expertise in LLM integration as a direction for ' +
   'future growth.'
 
 // First two sentences of SUMMARY — used on the Home hero so nothing drifts.

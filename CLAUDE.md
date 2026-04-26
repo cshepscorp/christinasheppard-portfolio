@@ -54,7 +54,7 @@ Use this data to populate the timeline components:
 ## Resume Content (for /resume page)
 
 ### Summary
-Software developer with experience building production web applications for enterprise insurance clients including Allstate and Aon. Known for bridging the gap between complex technical systems and business stakeholders — serving as a primary technical liaison while shipping full-stack features across the entire product lifecycle. Most recently contributed to AI-powered development, including a Claude API-powered conversational insurance interface and MCP-based backend integrations, and am actively growing expertise in LLM integration as a direction for future growth.
+Software developer with experience building production web applications for enterprise insurance clients including Allstate and Aon. Known for bridging the gap between complex technical systems and business stakeholders — serving as a primary technical liaison while shipping full-stack features across the entire product lifecycle. Most recently contributed to AI-powered development, including a Claude API-powered conversational insurance interface and MCP-based backend integrations. Actively pursuing expertise in LLM integration as a direction for future growth.
 
 ### Technical Skills
 - **Languages:** JavaScript (ES2020+), TypeScript, Bash

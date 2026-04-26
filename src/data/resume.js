@@ -39,7 +39,7 @@ export const CONTACT = {
 // Exact summary from the PDF.
 export const SUMMARY =
   'Software developer with experience building production web applications ' +
-  'for enterprise insurance clients including Allstate and Aon. Known for ' +
+  'for enterprise insurance clients. Known for ' +
   'bridging the gap between complex technical systems and business ' +
   'stakeholders — serving as a primary technical liaison while shipping ' +
   'full-stack features across the entire product lifecycle. Most recently ' +
@@ -52,7 +52,7 @@ export const SUMMARY =
 // If you want a different hero tagline, edit this; just keep it derivable.
 export const HERO_TAGLINE =
   'Software developer with experience building production web applications ' +
-  'for enterprise insurance clients including Allstate and Aon. Known for ' +
+  'for enterprise insurance clients. Known for ' +
   'bridging the gap between complex technical systems and business ' +
   'stakeholders — serving as a primary technical liaison while shipping ' +
   'full-stack features across the entire product lifecycle.'

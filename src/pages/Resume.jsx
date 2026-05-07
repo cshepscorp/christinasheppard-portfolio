@@ -676,7 +676,8 @@ export default function Resume() {
           // const sideContent = ROLE_SIDE_CONTENT[role.id]
           // const hasSide = Boolean(sideContent)
           return (
-            <div className={`role${hasSide ? '' : ' role-solo'}`} key={role.id}>
+            // <div className={`role${hasSide ? '' : ' role-solo'}`} key={role.id}>
+            <div className="role-solo" key={role.id}>
               <div className="role-main">
                 <div className={`role-meta${role.current ? ' current' : ''}`}>
                   {role.period}

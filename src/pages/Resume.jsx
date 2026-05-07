@@ -674,7 +674,7 @@ export default function Resume() {
 
         {EXPERIENCE.map((role, roleIdx) => {
           // const sideContent = ROLE_SIDE_CONTENT[role.id]
-          const hasSide = Boolean(sideContent)
+          // const hasSide = Boolean(sideContent)
           return (
             <div className={`role${hasSide ? '' : ' role-solo'}`} key={role.id}>
               <div className="role-main">
@@ -705,7 +705,7 @@ export default function Resume() {
                 )}
               </div>
 
-              {hasSide && <aside className="role-side">{sideContent}</aside>}
+              {/* {hasSide && <aside className="role-side">{sideContent}</aside>} */}
             </div>
           )
         })}

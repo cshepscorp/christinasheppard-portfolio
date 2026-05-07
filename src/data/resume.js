@@ -20,7 +20,7 @@
 // ──────────────────────────────────────────────────────────────────────────
 
 // Bump this when you replace the PDF. Any string change invalidates caches.
-export const RESUME_PDF_VERSION = '2026-04-26'
+export const RESUME_PDF_VERSION = '2026-05-07'
 
 export const RESUME_PDF_PATH = `/christy_sheppard_resume.pdf?v=${RESUME_PDF_VERSION}`
 
@@ -38,24 +38,23 @@ export const CONTACT = {
 
 // Exact summary from the PDF.
 export const SUMMARY =
-  'Software developer with experience building production web applications ' +
-  'for enterprise insurance clients. Known for ' +
-  'bridging the gap between complex technical systems and business ' +
-  'stakeholders — serving as a primary technical liaison while shipping ' +
-  'full-stack features across the entire product lifecycle. Most recently ' +
-  'contributed to AI-powered development, including a Claude API-powered ' +
-  'conversational insurance interface and MCP-based backend integrations. ' +
-  'Actively pursuing expertise in LLM integration as a direction for ' +
-  'future growth.'
+  "I'm a software developer with experience building production web applications " +
+  'for enterprise insurance clients. I sit comfortably at the intersection of ' +
+  'technical and client-facing work — having served as a primary technical ' +
+  'liaison while contributing across the full breadth of a fast-moving insurtech ' +
+  "platform. I've most recently contributed to AI-powered development, including " +
+  'a Claude API-powered conversational insurance interface and MCP-based backend ' +
+  'integrations — and am actively growing my skills in LLM integration, because ' +
+  "in an industry being reshaped by AI, standing still isn't really an option."
 
 // First two sentences of SUMMARY — used on the Home hero so nothing drifts.
 // If you want a different hero tagline, edit this; just keep it derivable.
 export const HERO_TAGLINE =
-  'Software developer with experience building production web applications ' +
-  'for enterprise insurance clients. Known for ' +
-  'bridging the gap between complex technical systems and business ' +
-  'stakeholders — serving as a primary technical liaison while shipping ' +
-  'full-stack features across the entire product lifecycle.'
+  "I'm a software developer with experience building production web applications " +
+  'for enterprise insurance clients. I sit comfortably at the intersection of ' +
+  'technical and client-facing work — having served as a primary technical ' +
+  'liaison while contributing across the full breadth of a fast-moving insurtech ' +
+  'platform.'
 
 // Skills — categories and ordering exactly as they appear in the PDF.
 export const SKILLS = [

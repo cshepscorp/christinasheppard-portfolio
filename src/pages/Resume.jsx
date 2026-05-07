@@ -673,7 +673,7 @@ export default function Resume() {
         </div>
 
         {EXPERIENCE.map((role, roleIdx) => {
-          const sideContent = ROLE_SIDE_CONTENT[role.id]
+          // const sideContent = ROLE_SIDE_CONTENT[role.id]
           const hasSide = Boolean(sideContent)
           return (
             <div className={`role${hasSide ? '' : ' role-solo'}`} key={role.id}>

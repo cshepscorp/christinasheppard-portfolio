@@ -1,16 +1,13 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
-  HERO_TAGLINE,
+  WEB_SUMMARY,
   EXPERIENCE,
   EARLIER_CAREER,
   CONTACT as RESUME_CONTACT,
 } from '../data/resume'
 
-// Hero tagline is derived from src/data/resume.js so it stays in sync with the
-// PDF. If you want to tweak the hero copy, edit HERO_TAGLINE there — don't
-// paraphrase here.
-const TAGLINE = HERO_TAGLINE
+const TAGLINE = WEB_SUMMARY
 
 // Decorative tag chips on the timeline cards. These are Home-specific UI, not
 // part of the resume data — they're just quick visual cues on each card.

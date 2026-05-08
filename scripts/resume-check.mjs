@@ -30,7 +30,6 @@ import path from 'node:path'
 import { PDFParse } from 'pdf-parse'
 
 import {
-  SUMMARY,
   SKILLS,
   EXPERIENCE,
   EARLIER_CAREER,
@@ -81,9 +80,6 @@ function check(label, value) {
   const norm = normalize(value)
   if (!pdfNorm.includes(norm)) misses.push({ label, value })
 }
-
-// ── SUMMARY ──
-check('SUMMARY', SUMMARY)
 
 // ── SKILLS ── each value in every category
 for (const group of SKILLS) {

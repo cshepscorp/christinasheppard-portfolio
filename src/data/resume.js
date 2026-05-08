@@ -3,8 +3,9 @@
 //
 // SINGLE SOURCE OF TRUTH for the resume content shown on christinasheppard.com.
 // The canonical document is public/christy_sheppard_resume.pdf. This file
-// should mirror it. Both Home.jsx (hero tagline) and Resume.jsx import from
-// here — there is no resume copy defined anywhere else in src/.
+// should mirror it. Resume.jsx and Home.jsx both import from here.
+//
+// Exception: WEB_SUMMARY is web-only copy and does NOT need to match the PDF.
 //
 // ── Living-document workflow ───────────────────────────────────────────────
 // When the resume changes:
@@ -36,25 +37,17 @@ export const CONTACT = {
   site:     'christinasheppard.com',
 }
 
-// Exact summary from the PDF.
-export const SUMMARY =
-  "I'm a software developer with experience building production web applications " +
-  'for enterprise insurance clients. I sit comfortably at the intersection of ' +
-  'technical and client-facing work — having served as a primary technical ' +
-  'liaison while contributing across the full breadth of a fast-moving insurtech ' +
-  "platform. I've most recently contributed to AI-powered development, including " +
-  'a Claude API-powered conversational insurance interface and MCP-based backend ' +
-  'integrations — and am actively growing my skills in LLM integration, because ' +
-  "in an industry being reshaped by AI, standing still isn't really an option."
-
-// First two sentences of SUMMARY — used on the Home hero so nothing drifts.
-// If you want a different hero tagline, edit this; just keep it derivable.
-export const HERO_TAGLINE =
-  "I'm a software developer with experience building production web applications " +
-  'for enterprise insurance clients. I sit comfortably at the intersection of ' +
-  'technical and client-facing work — having served as a primary technical ' +
-  'liaison while contributing across the full breadth of a fast-moving insurtech ' +
-  'platform.'
+// Web-only summary — intentionally NOT mirrored in the PDF.
+// Shown on the Home page hero. Edit freely; no PDF sync required.
+export const WEB_SUMMARY =
+  "I'm a software developer with extensive experience building production web " +
+  'applications for enterprise insurance clients. As the primary technical liaison ' +
+  'for both external carrier partners and internal stakeholders, I empower ' +
+  'engineering, product, sales, and operations teams alike, ensuring alignment and ' +
+  'enabling success across the full breadth of a fast-moving insuretech platform. ' +
+  "Most recently, I've delivered AI-powered projects, including a conversational " +
+  'insurance chat interface built on the Claude API, a custom MCP server, and ' +
+  'proprietary insurance data models.'
 
 // Skills — categories and ordering exactly as they appear in the PDF.
 export const SKILLS = [

@@ -2,7 +2,6 @@ import { useEffect, useRef, useState, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   CONTACT,
-  SUMMARY,
   SKILLS,
   EXPERIENCE,
   EARLIER_CAREER,
@@ -129,27 +128,6 @@ const STYLES = `
     color: var(--bg);
   }
 
-  /* ── Summary ── */
-  .summary {
-    position: relative;
-    z-index: 1;
-    max-width: 980px;
-    margin: 0 auto 3.5rem;
-    padding: 0 2rem;
-    width: 100%;
-    animation: fadeUp 0.7s 0.1s cubic-bezier(0.16, 1, 0.3, 1) both;
-  }
-
-  .summary-prose {
-    font-family: 'DM Serif Display', serif;
-    font-style: italic;
-    font-size: clamp(1.05rem, 1.5vw, 1.2rem);
-    line-height: 1.7;
-    color: var(--text-dim);
-    max-width: 760px;
-    padding-left: 1.25rem;
-    border-left: 2px solid var(--accent);
-  }
 
   /* ── Section wrapper ── */
   .section {
@@ -463,7 +441,7 @@ const STYLES = `
   }
   @media (max-width: 640px) {
     .back-bar     { padding: 4rem 1.25rem 0; }
-    .resume-header, .summary, .section { padding-left: 1.25rem; padding-right: 1.25rem; }
+    .resume-header, .section { padding-left: 1.25rem; padding-right: 1.25rem; }
     .resume-title-row { flex-direction: column; align-items: flex-start; }
     .edu-item { grid-template-columns: 1fr; gap: 0.5rem; }
   }
@@ -658,10 +636,6 @@ export default function Resume() {
           <a href={`https://${CONTACT.site}`}>{CONTACT.site}</a>
         </div>
       </header>
-
-      <section className="summary">
-        <p className="summary-prose">{SUMMARY}</p>
-      </section>
 
       {/* ── Experience ── */}
       <section className="section">

@@ -24,7 +24,7 @@
 export const RESUME_PDF_VERSION = '2026-05-13'
 
 // export const RESUME_PDF_PATH = `/christy_sheppard_resume.pdf?v=${RESUME_PDF_VERSION}`
-export const RESUME_PDF_PATH = '/christy_sheppard_resume.pdf?';
+export const RESUME_PDF_PATH = '/christy_sheppard_resume.pdf';
 
 export const CONTACT = {
   name: 'Christy Sheppard',

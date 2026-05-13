@@ -57,9 +57,9 @@ Use this data to populate the timeline components:
 Software developer with experience building production web applications for enterprise insurance clients including Allstate and Aon. Known for bridging the gap between complex technical systems and business stakeholders — serving as a primary technical liaison while shipping full-stack features across the entire product lifecycle. Most recently contributed to AI-powered development, including a Claude API-powered conversational insurance interface and MCP-based backend integrations. Actively pursuing expertise in LLM integration as a direction for future growth.
 
 ### Technical Skills
-- **Languages:** JavaScript (ES2020+), TypeScript, Bash
+- **Languages:** JavaScript (ES2020+), TypeScript
 - **Frontend:** React, Next.js, Chakra UI, Shadcn UI, Tailwind CSS, React Hook Form, SWR
-- **Backend:** Node.js, REST APIs, Express, SST (Serverless Framework)
+- **Backend:** Node.js, REST APIs, Express, SST
 - **Database:** MongoDB, AWS DynamoDB
 - **Cloud & Infra:** AWS (Amplify, Cognito, CloudWatch, IAM), GitHub Actions CI/CD, Sentry
 - **AI / MCP:** Anthropic Claude API, MCP (Model Context Protocol), LLM adapter pattern
@@ -71,12 +71,13 @@ Software developer with experience building production web applications for ente
 #### Buddy Technology — Software Developer | June 2022 – Present
 
 **ION Architecture & Partner Implementation — Primary Role**
-- Designed and built Insurance Object Notation (ION™) data models for enterprise carrier partners including Allstate and Aon, translating complex insurance products into Buddy's structured data format for digital deployment
-- Managed the full ION build process from initial product digitization through carrier approval and go-live, including API connectivity for quoting, binding, endorsements, and refunds
-- Troubleshot and solved unique partner implementation challenges — custom payment methods, state-specific compliance requirements, endorsements — often contributing fixes upstream to shared libraries (ion-helpers, ion-to-react)
+- Designs and builds Insurance Object Notation (ION™) data models for enterprise carrier partners including Allstate and Aon, translating complex insurance products into Buddy’s structured data format for digital deployment
+- Manages the full ION build process from initial product digitization through carrier approval and go-live, including API connectivity for quoting, binding, endorsements, refunds, emails, and forms
+- Troubleshoots and solves unique partner implementation challenges like custom payment requirements, and state-specific compliance regulations while contributing related fixes upstream to shared libraries
+
 
 **Enterprise Technical Liaison — Allstate & Aon**
-- Coordinated with implementation partners (Vero, Remax, Payscore, Avail, Jobble, Snap Finance, Progressive Leasing) on technical onboarding, documentation, and ongoing product evolution
+- Coordinates with implementation partners (including Vero, Remax, Payscore, Avail, Jobble, Snap Finance, Progressive Leasing) on technical onboarding, documentation, and ongoing product evolution
 
 **AI & Agentic Development — Most Recent**
 - Collaborated closely with the MCP architect to build a carrier-facing demo chat interface — including conversational insurance quoting, binding, and inline Stripe payment flow
@@ -85,7 +86,8 @@ Software developer with experience building production web applications for ente
 
 **Backend & Infrastructure**
 - Built user management system with Cognito-backed listing, org scoping, role filtering, pagination, and full deletion workflow with test coverage
-- Designed and shipped single-policy renew and customer charge endpoints with role-based authorization scoped to customer, producer, and admin access levels
+- Designed and shipped single-policy renew and customer charge endpoints with role-based authorization scoped to customer, producer, and administrative access levels
+
 
 #### PopMount, Inc. — Senior Visual / UX Designer | Aug 2018 – June 2022
 - Converted all e-commerce industry sites from RapidWeaver to Shopify; built and maintained all e-commerce websites alongside design and maintenance of internal WordPress and Shopify sites

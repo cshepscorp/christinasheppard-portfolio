@@ -21,20 +21,20 @@
 // ──────────────────────────────────────────────────────────────────────────
 
 // Bump this when you replace the PDF. Any string change invalidates caches.
-export const RESUME_PDF_VERSION = '2026-05-07'
+export const RESUME_PDF_VERSION = '2026-05-13'
 
 export const RESUME_PDF_PATH = `/christy_sheppard_resume.pdf?v=${RESUME_PDF_VERSION}`
 
 export const CONTACT = {
-  name:     'Christy Sheppard',
+  name: 'Christy Sheppard',
   location: 'Richmond, VA',
-  email:    'sheppard.christy@gmail.com',
+  email: 'sheppard.christy@gmail.com',
   // Phone is on the PDF but intentionally kept off the public site by default
   // (spam harvesting). Flip `showPhone` to true in Resume.jsx to render it.
-  phone:    '804-928-1876',
+  phone: '804-928-1876',
   linkedin: { label: '@christinasheppard', href: 'https://www.linkedin.com/in/christinasheppard/' },
-  github:   { label: '@cshepscorp',        href: 'https://github.com/cshepscorp' },
-  site:     'christinasheppard.com',
+  github: { label: '@cshepscorp', href: 'https://github.com/cshepscorp' },
+  site: 'christinasheppard.com',
 }
 
 // Web-only summary — intentionally NOT mirrored in the PDF.
@@ -51,14 +51,14 @@ export const WEB_SUMMARY =
 
 // Skills — categories and ordering exactly as they appear in the PDF.
 export const SKILLS = [
-  { key: 'Languages',    values: ['JavaScript (ES2020+)', 'TypeScript', 'Bash'] },
-  { key: 'Frontend',     values: ['React', 'Next.js', 'Chakra UI', 'Shadcn UI', 'Tailwind CSS', 'React Hook Form', 'SWR'] },
-  { key: 'Backend',      values: ['Node.js', 'REST APIs', 'Express', 'SST (Serverless Framework)'] },
-  { key: 'Database',     values: ['MongoDB', 'AWS DynamoDB'] },
+  { key: 'Languages', values: ['JavaScript (ES2020+)', 'TypeScript'] },
+  { key: 'Frontend', values: ['React', 'Next.js', 'Chakra UI', 'Shadcn UI', 'Tailwind CSS', 'React Hook Form', 'SWR'] },
+  { key: 'Backend', values: ['Node.js', 'REST APIs', 'Express', 'SST'] },
+  { key: 'Database', values: ['MongoDB', 'AWS DynamoDB'] },
   { key: 'Cloud & Infra', values: ['AWS (Amplify, Cognito, CloudWatch, IAM)', 'GitHub Actions CI/CD', 'Sentry'] },
-  { key: 'AI / MCP',     values: ['Anthropic Claude API', 'MCP (Model Context Protocol)', 'LLM adapter pattern'] },
-  { key: 'Testing',      values: ['Jest', 'React Testing Library'] },
-  { key: 'Other',        values: ['Shopify', 'WordPress', 'Adobe Creative Suite (Photoshop, Illustrator, InDesign)'] },
+  { key: 'AI / MCP', values: ['Anthropic Claude API', 'MCP (Model Context Protocol)', 'LLM adapter pattern'] },
+  { key: 'Testing', values: ['Jest', 'React Testing Library'] },
+  { key: 'Other', values: ['Shopify', 'WordPress', 'Adobe Creative Suite (Photoshop, Illustrator, InDesign)'] },
 ]
 
 // Experience — each entry mirrors the PDF. Subsections are optional; roles
@@ -76,16 +76,16 @@ export const EXPERIENCE = [
         heading: 'ION Architecture & Partner Implementation',
         note: 'Primary Role',
         bullets: [
-          'Designed and built Insurance Object Notation (ION™) data models for enterprise carrier partners including Allstate and Aon, translating complex insurance products into Buddy’s structured data format for digital deployment',
-          'Managed the full ION build process from initial product digitization through carrier approval and go-live, including API connectivity for quoting, binding, endorsements, refunds, emails, and forms',
-          'Troubleshot and solved unique partner implementation challenges — custom payment methods, state-specific compliance requirements, endorsements — often contributing fixes upstream to shared libraries',
+          'Designs and builds Insurance Object Notation (ION™) data models for enterprise carrier partners including Allstate and Aon, translating complex insurance products into Buddy’s structured data format for digital deployment',
+          'Manages the full ION build process from initial product digitization through carrier approval and go-live, including API connectivity for quoting, binding, endorsements, refunds, emails, and forms',
+          'Troubleshoots and solves unique partner implementation challenges like custom payment requirements, and state-specific compliance regulations while contributing related fixes upstream to shared libraries',
         ],
       },
       {
         heading: 'Enterprise Technical Liaison',
         note: 'Allstate & Aon',
         bullets: [
-          'Coordinated with implementation partners (Vero, Remax, Payscore, Avail, Jobble, Snap Finance, Progressive Leasing) on technical onboarding, documentation, and ongoing product evolution',
+          'Coordinates with implementation partners (including Vero, Remax, Payscore, Avail, Jobble, Snap Finance, Progressive Leasing) on technical onboarding, documentation, and ongoing product evolution',
         ],
       },
       {
@@ -101,7 +101,7 @@ export const EXPERIENCE = [
         heading: 'Backend & Infrastructure',
         bullets: [
           'Built user management system with Cognito-backed listing, org scoping, role filtering, pagination, and full deletion workflow with test coverage',
-          'Designed and shipped single-policy renew and customer charge endpoints with role-based authorization scoped to customer, producer, and admin access levels',
+          'Designed and shipped single-policy renew and customer charge endpoints with role-based authorization scoped to customer, producer, and administrative access levels',
         ],
       },
     ],
@@ -132,20 +132,20 @@ export const EXPERIENCE = [
 
 // Earlier-career pointer — the PDF doesn't list this as a structured role.
 export const EARLIER_CAREER = {
-  text:    'Earlier career in web content management and digital publishing',
+  text: 'Earlier career in web content management and digital publishing',
   company: 'Richmond.com / Richmond Times-Dispatch',
-  period:  'prior to 2011',
+  period: 'prior to 2011',
 }
 
 export const EDUCATION = [
   {
     school: 'University of Richmond Coding Bootcamp Certificate',
     period: 'August 2021 – February 2022',
-    note:   'Completed while working full time at PopMount, Inc.',
+    note: 'Completed while working full time at PopMount, Inc.',
   },
   {
-    school:  'University of Maryland, Baltimore County',
+    school: 'University of Maryland, Baltimore County',
     program: 'Imaging and Digital Arts, Animation Track; Art History Minor',
-    period:  '1999 – 2003',
+    period: '1999 – 2003',
   },
 ]

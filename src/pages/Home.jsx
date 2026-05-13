@@ -13,9 +13,9 @@ const TAGLINE = WEB_SUMMARY
 
 // Decorative tag chips — Home-specific UI, keyed by role id from resume.js.
 const ROLE_TAGS = {
-  buddy_technology:        ['React', 'Node.js', 'Claude API', 'AWS'],
-  popmount_inc:            ['Shopify', 'WordPress', 'Adobe Suite'],
-  nexstar_media_general:   ['Digital Advertising', 'Rich Media', 'Broadcast'],
+  buddy_technology: ['React', 'Node.js', 'Claude API', 'AWS'],
+  popmount_inc: ['Shopify', 'WordPress', 'Adobe Suite'],
+  nexstar_media_general: ['Digital Advertising', 'Rich Media', 'Broadcast'],
   richmond_times_dispatch: ['Web Publishing', 'Content Management'],
 }
 
@@ -50,9 +50,9 @@ const ALL_ROLES = [CURRENT_ROLE, ...PRIOR_ROLES].filter(Boolean)
 // the shared CONTACT data.
 const CONTACT = [
   { key: 'linkedin', value: RESUME_CONTACT.linkedin.label, href: RESUME_CONTACT.linkedin.href, external: true },
-  { key: 'github',   value: RESUME_CONTACT.github.label,   href: RESUME_CONTACT.github.href,   external: true },
-  { key: 'email',    value: RESUME_CONTACT.email,          href: `mailto:${RESUME_CONTACT.email}`, external: false },
-  { key: 'resume',   value: '→ /resume',                   href: '/resume',                     internal: true },
+  { key: 'github', value: RESUME_CONTACT.github.label, href: RESUME_CONTACT.github.href, external: true },
+  { key: 'email', value: RESUME_CONTACT.email, href: `mailto:${RESUME_CONTACT.email}`, external: false },
+  { key: 'resume', value: '→ /resume', href: '/resume', internal: true },
 ]
 
 function CareerHeader() {
@@ -159,7 +159,7 @@ function useTheme() {
     localStorage.setItem('cs-theme', theme)
   }, [theme])
   const toggle = useCallback(() => setTheme(t => {
-    if (t === 'dark')  return 'light'
+    if (t === 'dark') return 'light'
     if (t === 'light') return 'crt'
     return 'dark'
   }), [])
@@ -301,7 +301,7 @@ export default function Home() {
 
       {TIMELINE_LAYOUT === 'featured'
         ? <FeaturedTimeline onNavigate={() => navigate('/resume')} />
-        : <StackedTimeline  onNavigate={() => navigate('/resume')} />
+        : <StackedTimeline onNavigate={() => navigate('/resume')} />
       }
 
       {/* ── Footer: commented-out code ── */}

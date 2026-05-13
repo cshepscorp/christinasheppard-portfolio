@@ -192,6 +192,10 @@
   grid-template-columns: 1fr;
 }
 
+.role-solo:not(:first-of-type) {
+  margin-top: 3rem;
+}
+
 .role-main {
   min-width: 0;
 }

@@ -25,7 +25,7 @@ function useTheme() {
     localStorage.setItem('cs-theme', theme)
   }, [theme])
   const toggle = useCallback(() => setTheme(t => {
-    if (t === 'dark')  return 'light'
+    if (t === 'dark') return 'light'
     if (t === 'light') return 'crt'
     return 'dark'
   }), [])
@@ -48,8 +48,8 @@ function McpToolSnippet() {
       <div className="code-filename">mcp/tools/quote_tool.ts</div>
       <div className="code-label">// illustrative — not production source</div>
       <pre>
-<span className="code-comment">{`// Shape of a typical MCP tool we expose to the agent.\n`}</span>
-{`export const `}<span className="code-fn">quoteTool</span>{` =
+        <span className="code-comment">{`// Shape of a typical MCP tool we expose to the agent.\n`}</span>
+        {`export const `}<span className="code-fn">quoteTool</span>{` =
   server.`}<span className="code-fn">tool</span>{`(
     `}<span className="code-str">"get_quote"</span>{`,
     { line: z.string(), state: z.string() },
@@ -70,8 +70,8 @@ function ClaudeStreamSnippet() {
       <div className="code-filename">chat/quote_stream.ts</div>
       <div className="code-label">// illustrative — shape, not source</div>
       <pre>
-<span className="code-comment">{`// Carrier-branded conversational quoting.\n`}</span>
-{`const stream = `}<span className="code-kw">await</span>{` anthropic.messages.stream({
+        <span className="code-comment">{`// Carrier-branded conversational quoting.\n`}</span>
+        {`const stream = `}<span className="code-kw">await</span>{` anthropic.messages.stream({
   model:    `}<span className="code-str">"claude-sonnet-4-6"</span>{`,
   tools:    registeredTools,
   system:   systemPromptFor(carrier),
@@ -94,7 +94,7 @@ function IonSchemaSnippet() {
       <div className="code-filename">ion/products/example.yaml</div>
       <div className="code-label">// illustrative — shape, not a real product</div>
       <pre>
-{`product:  example_liability
+        {`product:  example_liability
 lines:
   - coverage: bodily_injury
     limits:  [ ... ]
@@ -114,7 +114,7 @@ function ShopifyWebhookSnippet() {
       <div className="code-filename">shopify/orders.js</div>
       <div className="code-label">// illustrative — shape, not source</div>
       <pre>
-{`app.`}<span className="code-fn">post</span>{`(`}<span className="code-str">"/webhook/orders"</span>{`, `}<span className="code-kw">async</span>{` (req, res) => {
+        {`app.`}<span className="code-fn">post</span>{`(`}<span className="code-str">"/webhook/orders"</span>{`, `}<span className="code-kw">async</span>{` (req, res) => {
   `}<span className="code-kw">const</span>{` order = verifyShopifySignature(req)
   `}<span className="code-kw">await</span>{` syncToProduction(order)
   res.sendStatus(`}<span className="code-str">200</span>{`)
@@ -149,10 +149,13 @@ export default function Resume() {
 
       <div className="top-chrome">
         <div className="term-path">
-          <span className="term-user">christy</span>
+          <button className="back-link" onClick={() => navigate('/')}>
+            <span className="term-user">christy</span>
+          </button>
           <span className="term-at">@</span>
           <span className="term-host">portfolio</span>
           <span className="term-at"> ~ / resume %</span>
+
         </div>
         <button className="theme-toggle" onClick={toggle} aria-label="Toggle light/dark mode">
           {theme === 'dark' ? 'Light' : theme === 'light' ? 'CRT' : 'Dark'}

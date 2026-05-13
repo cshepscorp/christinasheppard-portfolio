@@ -24,7 +24,12 @@
 export const RESUME_PDF_VERSION = '2026-05-13'
 
 // export const RESUME_PDF_PATH = `/christy_sheppard_resume.pdf?v=${RESUME_PDF_VERSION}`
-export const RESUME_PDF_PATH = '/christy_sheppard_resume.pdf';
+export const RESUME_PDF_PATH = '/christy_sheppard_resume.pdf'
+
+// Controls which career section layout renders on the home page.
+// 'featured' — current role large + prominent, prior roles compact below
+// 'stacked'  — all roles in a vertical list, most-recent-first
+export const TIMELINE_LAYOUT = 'stacked'
 
 export const CONTACT = {
   name: 'Christy Sheppard',
@@ -41,7 +46,7 @@ export const CONTACT = {
 // Web-only summary — intentionally NOT mirrored in the PDF.
 // Shown on the Home page hero. Edit freely; no PDF sync required.
 export const WEB_SUMMARY =
-  "I'm a software developer with extensive experience building production web " +
+  "I'm a software developer with experience building production web " +
   'applications for enterprise insurance clients. As the primary technical liaison ' +
   'for both external carrier partners and internal stakeholders, I empower ' +
   'engineering, product, sales, and operations teams alike, ensuring alignment and ' +
@@ -77,8 +82,8 @@ export const EXPERIENCE = [
         heading: 'ION Architecture & Partner Implementation',
         note: 'Primary Role',
         bullets: [
-          'Designs and builds Insurance Object Notation (ION™) data models for enterprise carrier partners including Allstate and Aon, translating complex insurance products into Buddy’s structured data format for digital deployment',
-          'Manages the full ION build process from initial product digitization through carrier approval and go-live, including API connectivity for quoting, binding, endorsements, refunds, emails, and forms',
+          'Designs and builds Insurance Object Notation (ION™) data models for enterprise carrier partners including Allstate and Aon, translating complex insurance products into Buddy\'s structured data format for digital deployment',
+          'Manages the full ION build process from initial product digitization through partner approval and production launch, including API connectivity for all policy lifecycle events including quoting, binding, endorsements, refunds, emails, and forms',
           'Troubleshoots and solves unique partner implementation challenges like custom payment requirements, and state-specific compliance regulations while contributing related fixes upstream to shared libraries',
         ],
       },
@@ -93,7 +98,7 @@ export const EXPERIENCE = [
         heading: 'AI & Agentic Development',
         note: 'Most Recent',
         bullets: [
-          'Collaborated closely with the MCP architect to build a carrier-facing demo chat interface — including conversational insurance quoting, binding, and inline Stripe payment flow',
+          'Collaborated closely with internal MCP (Model Context Protocol) architect to build a customer-facing demo chat interface, including conversational insurance quoting, binding, and inline Stripe payment flow',
           'Contributed to MCP design decisions by surfacing integration requirements discovered during chat development, resulting in targeted improvements to the MCP itself',
           'Designed the interface to be white-label configurable with carrier-specific theming, making it adaptable for different client deployments',
         ],
@@ -101,7 +106,7 @@ export const EXPERIENCE = [
       {
         heading: 'Backend & Infrastructure',
         bullets: [
-          'Built user management system with Cognito-backed listing, org scoping, role filtering, pagination, and full deletion workflow with test coverage',
+          'Built user management system with Cognito-backed listing, organization scoping, role configuration, pagination, and full deletion workflow with test coverage',
           'Designed and shipped single-policy renew and customer charge endpoints with role-based authorization scoped to customer, producer, and administrative access levels',
         ],
       },

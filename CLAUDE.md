@@ -72,7 +72,7 @@ Software developer with experience building production web applications for ente
 
 **ION Architecture & Partner Implementation — Primary Role**
 - Designs and builds Insurance Object Notation (ION™) data models for enterprise carrier partners including Allstate and Aon, translating complex insurance products into Buddy’s structured data format for digital deployment
-- Manages the full ION build process from initial product digitization through carrier approval and go-live, including API connectivity for quoting, binding, endorsements, refunds, emails, and forms
+- Manages the full ION build process from initial product digitization through partner approval and production launch, including API connectivity for all policy lifecycle events including quoting, binding, endorsements, refunds, emails, and forms
 - Troubleshoots and solves unique partner implementation challenges like custom payment requirements, and state-specific compliance regulations while contributing related fixes upstream to shared libraries
 
 
@@ -80,12 +80,12 @@ Software developer with experience building production web applications for ente
 - Coordinates with implementation partners (including Vero, Remax, Payscore, Avail, Jobble, Snap Finance, Progressive Leasing) on technical onboarding, documentation, and ongoing product evolution
 
 **AI & Agentic Development — Most Recent**
-- Collaborated closely with the MCP architect to build a carrier-facing demo chat interface — including conversational insurance quoting, binding, and inline Stripe payment flow
+- Collaborated closely with internal MCP (Model Context Protocol) architect to build a customer-facing demo chat interface, including conversational insurance quoting, binding, and inline Stripe payment flow
 - Contributed to MCP design decisions by surfacing integration requirements discovered during chat development, resulting in targeted improvements to the MCP itself
 - Designed the interface to be white-label configurable with carrier-specific theming, making it adaptable for different client deployments
 
 **Backend & Infrastructure**
-- Built user management system with Cognito-backed listing, org scoping, role filtering, pagination, and full deletion workflow with test coverage
+- Built user management system with Cognito-backed listing, organization scoping, role configuration, pagination, and full deletion workflow with test coverage
 - Designed and shipped single-policy renew and customer charge endpoints with role-based authorization scoped to customer, producer, and administrative access levels
 
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=VT323&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -57,9 +57,96 @@
   --code-punct: #4f5d6e;
 }
 
+/* ── CRT / amber phosphor theme ── */
+[data-theme="crt"] {
+  --bg: #0a0800;
+  --surface: #120e00;
+  --card-bg: rgba(18, 14, 0, 0.88);
+  --card-bg-subtle: rgba(18, 14, 0, 0.65);
+  --border: rgba(255, 176, 0, 0.18);
+  --border-strong: rgba(255, 176, 0, 0.35);
+  --text: #ffb000;
+  --text-dim: #cc8a00;
+  --muted: #7a5200;
+  --accent: #ffb000;
+  --accent2: #ffd060;
+  --glow: rgba(255, 176, 0, 0.22);
+  --grid-line: rgba(255, 176, 0, 0.05);
+
+  --code-bg: rgba(255, 176, 0, 0.05);
+  --code-border: rgba(255, 176, 0, 0.22);
+  --code-keyword: #ffd060;
+  --code-string: #b8cc60;
+  --code-fn: #ffb000;
+  --code-comment: #553a00;
+  --code-punct: #7a5200;
+}
+
+/* VT323 for display/heading text only */
+[data-theme="crt"] h1,
+[data-theme="crt"] h2,
+[data-theme="crt"] h3,
+[data-theme="crt"] .card-company,
+[data-theme="crt"] .role-company,
+[data-theme="crt"] .edu-school,
+[data-theme="crt"] .featured-company,
+[data-theme="crt"] .prior-company,
+[data-theme="crt"] .stacked-company {
+  font-family: 'VT323', monospace !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.04em;
+}
+
+/* DM Mono for all prose/body serif elements — serif italic is unreadable in amber */
+[data-theme="crt"] .role-bullets li,
+[data-theme="crt"] .earlier-career {
+  font-family: 'DM Mono', monospace !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+}
+
+[data-theme="crt"] body {
+  text-shadow: 0 0 10px rgba(255, 176, 0, 0.5);
+  font-size: 1.05em;
+}
+
+/* Scanlines overlay */
+[data-theme="crt"] body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 3px,
+    rgba(0, 0, 0, 0.1) 3px,
+    rgba(0, 0, 0, 0.1) 4px
+  );
+  pointer-events: none;
+  z-index: 99999;
+}
+
+/* Theme toggle — boost visibility against dark amber background */
+[data-theme="crt"] .theme-toggle {
+  color: var(--accent);
+  border-color: rgba(255, 176, 0, 0.5);
+  background: rgba(18, 14, 0, 0.85);
+}
+
+/* Vignette */
+[data-theme="crt"] body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.5) 100%);
+  pointer-events: none;
+  z-index: 99998;
+}
+
 /* ── Light theme override (system preference, unless user toggled dark) ── */
 @media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
+  :root:not([data-theme="dark"]):not([data-theme="crt"]) {
     --bg: #f4f0e8;
     --surface: #ede9df;
     --card-bg: rgba(255, 255, 255, 0.82);
@@ -130,13 +217,15 @@ body {
 /* ── Shared top chrome: terminal path + theme toggle ── */
 .top-chrome {
   position: fixed;
-  top: 1.25rem;
-  left: 1.75rem;
-  right: 1.75rem;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1.25rem 1.75rem 2rem;
+  background: linear-gradient(to bottom, var(--bg) 70%, transparent 100%);
   pointer-events: none;
 }
 

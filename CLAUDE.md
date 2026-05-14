@@ -73,7 +73,7 @@ Software developer with experience building production web applications for ente
 **ION Architecture & Partner Implementation — Primary Role**
 - Designs and builds Insurance Object Notation (ION™) data models for enterprise carrier partners including Allstate and Aon, translating complex insurance products into Buddy’s structured data format for digital deployment
 - Manages the full ION build process from initial product digitization through partner approval and production launch, including API connectivity for all policy lifecycle events including quoting, binding, endorsements, refunds, emails, and forms
-- Troubleshoots and solves unique partner implementation challenges like custom payment requirements, and state-specific compliance regulations while contributing related fixes upstream to shared libraries
+- Drives end-to-end resolution of partner implementation challenges, coordinating across internal and external teams to deliver purpose-built solutions and contribute upstream library improvements that strengthen the broader platform
 
 
 **Enterprise Technical Liaison — Allstate & Aon**

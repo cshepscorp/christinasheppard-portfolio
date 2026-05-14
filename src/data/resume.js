@@ -21,7 +21,7 @@
 // ──────────────────────────────────────────────────────────────────────────
 
 // Bump this when you replace the PDF. Any string change invalidates caches.
-export const RESUME_PDF_VERSION = '2026-05-13'
+export const RESUME_PDF_VERSION = '2026-05-14'
 
 // export const RESUME_PDF_PATH = `/christy_sheppard_resume.pdf?v=${RESUME_PDF_VERSION}`
 export const RESUME_PDF_PATH = '/christy_sheppard_resume.pdf'
@@ -84,7 +84,7 @@ export const EXPERIENCE = [
         bullets: [
           'Designs and builds Insurance Object Notation (ION™) data models for enterprise carrier partners including Allstate and Aon, translating complex insurance products into Buddy\'s structured data format for digital deployment',
           'Manages the full ION build process from initial product digitization through partner approval and production launch, including API connectivity for all policy lifecycle events including quoting, binding, endorsements, refunds, emails, and forms',
-          'Troubleshoots and solves unique partner implementation challenges like custom payment requirements, and state-specific compliance regulations while contributing related fixes upstream to shared libraries',
+          'Drives end-to-end resolution of partner implementation challenges, coordinating across internal and external teams to deliver purpose-built solutions and contribute upstream library improvements that strengthen the broader platform',
         ],
       },
       {

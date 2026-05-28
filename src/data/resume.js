@@ -50,7 +50,7 @@ export const WEB_SUMMARY =
   'applications for enterprise insurance clients. As the primary technical liaison ' +
   'for both external carrier partners and internal stakeholders, I empower ' +
   'engineering, product, sales, and operations teams alike, ensuring alignment and ' +
-  'enabling success across the full breadth of a fast-moving insuretech platform. ' +
+  'enabling success across the full breadth of a fast-moving insurtech platform. ' +
   "Most recently, I've delivered AI-powered projects, including a conversational " +
   'insurance chat interface built on the Claude API, a custom MCP server, and ' +
   'proprietary insurance data models.'

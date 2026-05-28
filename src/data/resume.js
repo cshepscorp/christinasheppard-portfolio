@@ -46,7 +46,7 @@ export const CONTACT = {
 // Web-only summary — intentionally NOT mirrored in the PDF.
 // Shown on the Home page hero. Edit freely; no PDF sync required.
 export const WEB_SUMMARY =
-  "I'm a software developer with experience building production web " +
+  "I'm a software developer with years of experience building production web " +
   'applications for enterprise insurance clients. As the primary technical liaison ' +
   'for both external carrier partners and internal stakeholders, I empower ' +
   'engineering, product, sales, and operations teams alike, ensuring alignment and ' +

@@ -7,6 +7,7 @@ import {
   CONTACT as RESUME_CONTACT,
   TIMELINE_LAYOUT,
 } from '../data/resume'
+import { PROJECTS } from '../data/projects'
 import './Home.css'
 
 const TAGLINE = WEB_SUMMARY
@@ -142,6 +143,71 @@ function StackedTimeline({ onNavigate }) {
             <RoleTags tags={role.tags} isCurrent={role.current} />
           </button>
         ))}
+      </div>
+    </section>
+  )
+}
+
+function ProjectCard({ project }) {
+  const hasScreenshot = Boolean(project.screenshot)
+  return (
+    <div className="project-card">
+      <a
+        href={project.url}
+        target="_blank"
+        rel="noreferrer"
+        className="project-thumb"
+        aria-label={`Open ${project.name}`}
+        style={{
+          '--proj-from': project.gradientFrom,
+          '--proj-to': project.gradientTo,
+        }}
+      >
+        {hasScreenshot ? (
+          <img src={project.screenshot} alt={`${project.name} screenshot`} className="project-screenshot" />
+        ) : (
+          <div className="project-thumb-placeholder">
+            <span className="project-url-chip">{new URL(project.url).hostname}</span>
+          </div>
+        )}
+        <div className="project-thumb-overlay" />
+      </a>
+      <div className="project-body">
+        <div className="project-name">{project.name}</div>
+        <div className="project-tagline">{project.tagline}</div>
+        <p className="project-desc">{project.description}</p>
+        <div className="card-tags">
+          {project.tags.map((t, i) => <span key={i} className="tag">{t}</span>)}
+        </div>
+        <div className="project-links">
+          <a href={project.url} target="_blank" rel="noreferrer" className="project-link-live">
+            ↗ live site
+          </a>
+          {project.github.map((g, i) => (
+            <a key={i} href={g.href} target="_blank" rel="noreferrer" className="project-link-gh">
+              github/{g.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function ProjectsSection() {
+  return (
+    <section className="career-section projects-section">
+      <div className="career-header">
+        <span className="code-comment">{'// '}</span>
+        <span className="code-keyword">const</span>
+        {' '}
+        <span className="code-fn">projects</span>
+        <span className="code-punct"> = </span>
+        <span className="code-fn">portfolio</span>
+        <span className="code-punct">.build()</span>
+      </div>
+      <div className="projects-grid">
+        {PROJECTS.map(p => <ProjectCard key={p.id} project={p} />)}
       </div>
     </section>
   )
@@ -303,6 +369,8 @@ export default function Home() {
         ? <FeaturedTimeline onNavigate={() => navigate('/resume')} />
         : <StackedTimeline onNavigate={() => navigate('/resume')} />
       }
+
+      <ProjectsSection />
 
       {/* ── Footer: commented-out code ── */}
       <footer className="home-footer">

@@ -148,53 +148,73 @@ function StackedTimeline({ onNavigate }) {
   )
 }
 
-function ProjectCard({ project }) {
+function ProjectThumb({ project, featured }) {
   const hasScreenshot = Boolean(project.screenshot)
   return (
-    <div className="project-card">
-      <a
-        href={project.url}
-        target="_blank"
-        rel="noreferrer"
-        className="project-thumb"
-        aria-label={`Open ${project.name}`}
-        style={{
-          '--proj-from': project.gradientFrom,
-          '--proj-to': project.gradientTo,
-        }}
-      >
-        {hasScreenshot ? (
-          <img src={project.screenshot} alt={`${project.name} screenshot`} className="project-screenshot" />
-        ) : (
-          <div className="project-thumb-placeholder">
-            <span className="project-url-chip">{new URL(project.url).hostname}</span>
-          </div>
-        )}
-        <div className="project-thumb-overlay" />
-      </a>
-      <div className="project-body">
-        <div className="project-name">{project.name}</div>
-        <div className="project-tagline">{project.tagline}</div>
-        <p className="project-desc">{project.description}</p>
-        <div className="card-tags">
-          {project.tags.map((t, i) => <span key={i} className="tag">{t}</span>)}
+    <a
+      href={project.url}
+      target="_blank"
+      rel="noreferrer"
+      className={featured ? 'project-thumb project-thumb-featured' : 'project-thumb'}
+      aria-label={`Open ${project.name}`}
+      style={{ '--proj-from': project.gradientFrom, '--proj-to': project.gradientTo }}
+    >
+      {hasScreenshot ? (
+        <img src={project.screenshot} alt={`${project.name} screenshot`} className="project-screenshot" />
+      ) : (
+        <div className="project-thumb-placeholder">
+          <span className="project-url-chip">{new URL(project.url).hostname}</span>
         </div>
-        <div className="project-links">
-          <a href={project.url} target="_blank" rel="noreferrer" className="project-link-live">
-            ↗ live site
+      )}
+      <div className="project-thumb-overlay" />
+    </a>
+  )
+}
+
+function ProjectBody({ project }) {
+  return (
+    <div className="project-body">
+      <div className="project-name">{project.name}</div>
+      <div className="project-tagline">{project.tagline}</div>
+      <p className="project-desc">{project.description}</p>
+      <div className="card-tags">
+        {project.tags.map((t, i) => <span key={i} className="tag">{t}</span>)}
+      </div>
+      <div className="project-links">
+        <a href={project.url} target="_blank" rel="noreferrer" className="project-link-live">
+          ↗ live site
+        </a>
+        {project.github.map((g, i) => (
+          <a key={i} href={g.href} target="_blank" rel="noreferrer" className="project-link-gh">
+            github/{g.label}
           </a>
-          {project.github.map((g, i) => (
-            <a key={i} href={g.href} target="_blank" rel="noreferrer" className="project-link-gh">
-              github/{g.label}
-            </a>
-          ))}
-        </div>
+        ))}
       </div>
     </div>
   )
 }
 
+function ProjectCard({ project }) {
+  return (
+    <div className="project-card">
+      <ProjectThumb project={project} />
+      <ProjectBody project={project} />
+    </div>
+  )
+}
+
+function FeaturedProjectCard({ project }) {
+  return (
+    <div className="project-card project-card-featured">
+      <ProjectThumb project={project} featured />
+      <ProjectBody project={project} />
+    </div>
+  )
+}
+
 function ProjectsSection() {
+  const featured = PROJECTS.find(p => p.featured)
+  const rest = PROJECTS.filter(p => !p.featured)
   return (
     <section className="career-section projects-section">
       <div className="career-header">
@@ -206,9 +226,12 @@ function ProjectsSection() {
         <span className="code-fn">portfolio</span>
         <span className="code-punct">.build()</span>
       </div>
-      <div className="projects-grid">
-        {PROJECTS.map(p => <ProjectCard key={p.id} project={p} />)}
-      </div>
+      {featured && <FeaturedProjectCard project={featured} />}
+      {rest.length > 0 && (
+        <div className="projects-grid">
+          {rest.map(p => <ProjectCard key={p.id} project={p} />)}
+        </div>
+      )}
     </section>
   )
 }

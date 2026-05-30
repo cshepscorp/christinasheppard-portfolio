@@ -12,6 +12,7 @@
 export const PROJECTS = [
   {
     id: 'parks',
+    featured: true,
     name: 'National Parks Explorer',
     tagline: 'Full-stack NPS companion app',
     description:

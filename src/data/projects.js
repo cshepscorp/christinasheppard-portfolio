@@ -48,4 +48,22 @@ export const PROJECTS = [
     gradientTo: '#0c1018',
     screenshot: '/images/mtg-screenshot.png',
   },
+  {
+    id: 'cc_dashboard',
+    name: 'CC Dashboard',
+    tagline: 'Personal finance tracker',
+    description:
+      'Monthly credit card and loan payment tracker built to replace a spreadsheet. ' +
+      'Tracks paid vs. due across all accounts, surfaces promo-rate expiry alerts, ' +
+      'and includes quick-pay links to each card portal. Demo mode shows sample data ' +
+      'for visitors; real data is owner-gated via Google OAuth.',
+    url: 'https://finance.christinasheppard.com/dashboard',
+    github: [
+      { label: 'repo', href: 'https://github.com/cshepscorp/cc-dashboard' },
+    ],
+    tags: ['React 18', 'TypeScript', 'Tailwind', 'Shadcn UI', 'Recharts', 'Supabase', 'AWS Amplify'],
+    gradientFrom: '#1a2a3a',
+    gradientTo: '#0c1018',
+    screenshot: '/images/cc-screenshot.png',
+  },
 ]

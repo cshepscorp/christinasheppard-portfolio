@@ -17,7 +17,7 @@ function useTheme() {
   const getInitial = () => {
     const stored = localStorage.getItem('cs-theme')
     if (stored) return stored
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    return 'dark'
   }
   const [theme, setTheme] = useState(getInitial)
   useEffect(() => {

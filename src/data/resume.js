@@ -21,7 +21,7 @@
 // ──────────────────────────────────────────────────────────────────────────
 
 // Bump this when you replace the PDF. Any string change invalidates caches.
-export const RESUME_PDF_VERSION = '2026-05-14'
+export const RESUME_PDF_VERSION = '2026-06-04'
 
 // export const RESUME_PDF_PATH = `/christy_sheppard_resume.pdf?v=${RESUME_PDF_VERSION}`
 export const RESUME_PDF_PATH = '/christy_sheppard_resume.pdf'
@@ -58,7 +58,7 @@ export const WEB_SUMMARY =
 // Skills — categories and ordering exactly as they appear in the PDF.
 export const SKILLS = [
   { key: 'Languages', values: ['JavaScript (ES2020+)', 'TypeScript'] },
-  { key: 'Frontend', values: ['React', 'Next.js', 'Chakra UI', 'Shadcn UI', 'Tailwind CSS', 'React Hook Form', 'SWR'] },
+  { key: 'Frontend', values: ['React', 'Next.js', 'Vite', 'Chakra UI', 'Shadcn UI', 'Tailwind CSS'] },
   { key: 'Backend', values: ['Node.js', 'REST APIs', 'Express', 'SST'] },
   { key: 'Database', values: ['MongoDB', 'AWS DynamoDB'] },
   { key: 'Cloud & Infra', values: ['AWS (Amplify, Cognito, CloudWatch, IAM)', 'GitHub Actions CI/CD', 'Sentry'] },

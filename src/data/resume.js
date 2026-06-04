@@ -57,9 +57,8 @@ export const WEB_SUMMARY =
 
 // Skills — categories and ordering exactly as they appear in the PDF.
 export const SKILLS = [
-  { key: 'Languages', values: ['JavaScript (ES2020+)', 'TypeScript'] },
   { key: 'Frontend', values: ['React', 'Next.js', 'Vite', 'Chakra UI', 'Shadcn UI', 'Tailwind CSS'] },
-  { key: 'Backend', values: ['Node.js', 'REST APIs', 'Express', 'SST'] },
+  { key: 'Backend', values: ['TypeScript', 'Node.js', 'REST APIs', 'Express', 'SST'] },
   { key: 'Database', values: ['MongoDB', 'AWS DynamoDB'] },
   { key: 'Cloud & Infra', values: ['AWS (Amplify, Cognito, CloudWatch, IAM)', 'GitHub Actions CI/CD', 'Sentry'] },
   { key: 'AI / MCP', values: ['Anthropic Claude API', 'MCP (Model Context Protocol)', 'LLM adapter pattern'] },

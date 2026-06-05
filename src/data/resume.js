@@ -21,7 +21,7 @@
 // ──────────────────────────────────────────────────────────────────────────
 
 // Bump this when you replace the PDF. Any string change invalidates caches.
-export const RESUME_PDF_VERSION = '2026-06-04'
+export const RESUME_PDF_VERSION = '2026-06-05'
 
 // export const RESUME_PDF_PATH = `/christy_sheppard_resume.pdf?v=${RESUME_PDF_VERSION}`
 export const RESUME_PDF_PATH = '/christy_sheppard_resume.pdf'
@@ -59,9 +59,9 @@ export const WEB_SUMMARY =
 export const SKILLS = [
   { key: 'Frontend', values: ['React', 'Next.js', 'Vite', 'Chakra UI', 'Shadcn UI', 'Tailwind CSS'] },
   { key: 'Backend', values: ['TypeScript', 'Node.js', 'REST APIs', 'Express', 'SST'] },
-  { key: 'Database', values: ['MongoDB', 'AWS DynamoDB'] },
+  { key: 'Database', values: ['MongoDB', 'DynamoDB'] },
   { key: 'Cloud & Infra', values: ['AWS (Amplify, Cognito, CloudWatch, IAM)', 'GitHub Actions CI/CD', 'Sentry'] },
-  { key: 'AI / MCP', values: ['Anthropic Claude API', 'MCP (Model Context Protocol)', 'LLM adapter pattern'] },
+  { key: 'AI / MCP', values: ['Anthropic Claude API', 'MCP (Model Context Protocol)', 'LLM adapter patterns'] },
   { key: 'Testing', values: ['Jest', 'React Testing Library'] },
   { key: 'Other', values: ['Shopify', 'WordPress', 'Adobe Creative Suite (Photoshop, Illustrator, InDesign)'] },
 ]

@@ -52,7 +52,7 @@ export const WEB_SUMMARY =
   'engineering, product, sales, and operations teams alike, ensuring alignment and ' +
   'enabling success across the full breadth of a fast-moving insurtech platform. ' +
   "Most recently, I've delivered AI-powered projects, including a conversational " +
-  'insurance chat interface built on the Claude API, a custom MCP server, and ' +
+  'insurance chat interface built on the Claude API, and ' +
   'proprietary insurance data models.'
 
 // Skills — categories and ordering exactly as they appear in the PDF.

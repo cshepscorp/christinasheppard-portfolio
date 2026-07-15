@@ -264,46 +264,46 @@ function prefersReducedMotion() {
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches
 }
 
-function useStreamedText(text, { startDelay = 600, chunkMin = 2, chunkMax = 5, tickMs = 48 } = {}) {
-  const reduce = prefersReducedMotion()
-  const [revealed, setRevealed] = useState(() => (reduce ? text.length : 0))
-  const [done, setDone] = useState(() => reduce)
+// function useStreamedText(text, { startDelay = 600, chunkMin = 2, chunkMax = 5, tickMs = 48 } = {}) {
+//   const reduce = prefersReducedMotion()
+//   const [revealed, setRevealed] = useState(() => (reduce ? text.length : 0))
+//   const [done, setDone] = useState(() => reduce)
 
-  useEffect(() => {
-    if (reduce) return
+//   useEffect(() => {
+//     if (reduce) return
 
-    let cancelled = false
-    let interval = null
-    const startTimer = setTimeout(() => {
-      if (cancelled) return
-      interval = setInterval(() => {
-        if (cancelled) return
-        setRevealed(r => {
-          const chunk = Math.floor(Math.random() * (chunkMax - chunkMin + 1)) + chunkMin
-          const next = Math.min(text.length, r + chunk)
-          if (next >= text.length) {
-            clearInterval(interval)
-            setDone(true)
-          }
-          return next
-        })
-      }, tickMs)
-    }, startDelay)
+//     let cancelled = false
+//     let interval = null
+//     const startTimer = setTimeout(() => {
+//       if (cancelled) return
+//       interval = setInterval(() => {
+//         if (cancelled) return
+//         setRevealed(r => {
+//           const chunk = Math.floor(Math.random() * (chunkMax - chunkMin + 1)) + chunkMin
+//           const next = Math.min(text.length, r + chunk)
+//           if (next >= text.length) {
+//             clearInterval(interval)
+//             setDone(true)
+//           }
+//           return next
+//         })
+//       }, tickMs)
+//     }, startDelay)
 
-    return () => {
-      cancelled = true
-      clearTimeout(startTimer)
-      if (interval) clearInterval(interval)
-    }
-  }, [text, startDelay, chunkMin, chunkMax, tickMs, reduce])
+//     return () => {
+//       cancelled = true
+//       clearTimeout(startTimer)
+//       if (interval) clearInterval(interval)
+//     }
+//   }, [text, startDelay, chunkMin, chunkMax, tickMs, reduce])
 
-  return { text: text.slice(0, revealed), done }
-}
+//   return { text: text.slice(0, revealed), done }
+// }
 
 export default function Home() {
   const navigate = useNavigate()
   const { theme, toggle } = useTheme()
-  const { text: streamedTagline, done: streamDone } = useStreamedText(TAGLINE)
+  // const { text: streamedTagline, done: streamDone } = useStreamedText(TAGLINE)
 
 
   const handleContactClick = (item, e) => {

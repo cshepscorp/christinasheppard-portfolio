@@ -347,8 +347,9 @@ export default function Home() {
           </div>
 
           <p className="tagline" aria-label={TAGLINE}>
-            {streamedTagline}
-            {!streamDone && <span className="tagline-caret" aria-hidden="true" />}
+            {/* {streamedTagline}
+            {!streamDone && <span className="tagline-caret" aria-hidden="true" />} */}
+            {TAGLINE}
           </p>
 
           <div className="prompt">

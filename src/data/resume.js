@@ -119,16 +119,16 @@ export const EXPERIENCE = [
         heading: 'ION Architecture & Partner Implementation',
         note: 'Primary Role',
         bullets: [
-          "Designs and builds Insurance Object Notation (ION™) data models for Fortune 500 insurance carriers, translating complex insurance products into Buddy's structured data format for digital deployment",
-          'Manages the full ION build process from initial product digitization through partner approval and production launch, including API connectivity for all policy lifecycle events including quoting, binding, endorsements, refunds, emails, and forms',
-          'Drives end-to-end resolution of partner implementation challenges, coordinating across internal and external teams to deliver purpose-built solutions and contribute upstream library improvements that strengthen the broader platform',
+          "Designed and built Insurance Object Notation (ION™) data models for Fortune 500 insurance carriers, translating complex insurance products into Buddy's structured data format for digital deployment",
+          'Managed the full ION build process from initial product digitization through partner approval and production launch, including API connectivity for all policy lifecycle events including quoting, binding, endorsements, refunds, emails, and forms',
+          'Drove end-to-end resolution of partner implementation challenges, coordinating across internal and external teams to deliver purpose-built solutions and contribute upstream library improvements that strengthen the broader platform',
         ],
       },
       {
         heading: 'Enterprise Technical Liaison',
-        note: 'Allstate & Aon',
+        note: 'Fortune 500 Insurance Carriers',
         bullets: [
-          'Coordinates with implementation partners (including Vero, Remax, Payscore, Avail, Jobble, Snap Finance, Progressive Leasing) on technical onboarding, documentation, and ongoing product evolution',
+          'Coordinated with implementation partners on technical onboarding, documentation, and ongoing product evolution',
         ],
       },
       {
@@ -138,13 +138,6 @@ export const EXPERIENCE = [
           'Collaborated closely with internal MCP (Model Context Protocol) architect to build a customer-facing demo chat interface, including conversational insurance quoting, binding, and inline Stripe payment flow',
           'Contributed to MCP design decisions by surfacing integration requirements discovered during chat development, resulting in targeted improvements to the MCP itself',
           'Designed the interface to be white-label configurable with carrier-specific theming, making it adaptable for different client deployments',
-        ],
-      },
-      {
-        heading: 'Backend & Infrastructure',
-        bullets: [
-          'Built user management system with Cognito-backed listing, organization scoping, role configuration, pagination, and full deletion workflow with test coverage',
-          'Designed and shipped single-policy renew and customer charge endpoints with role-based authorization scoped to customer, producer, and administrative access levels',
         ],
       },
     ],

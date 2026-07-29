@@ -21,15 +21,15 @@
 // ──────────────────────────────────────────────────────────────────────────
 
 // Bump this when you replace the PDF. Any string change invalidates caches.
-export const RESUME_PDF_VERSION = '2026-07-16'
+export const RESUME_PDF_VERSION = '2026-07-29';
 
 // export const RESUME_PDF_PATH = `/christy_sheppard_resume.pdf?v=${RESUME_PDF_VERSION}`
-export const RESUME_PDF_PATH = '/christy_sheppard_resume.pdf'
+export const RESUME_PDF_PATH = '/christy_sheppard_resume.pdf';
 
 // Controls which career section layout renders on the home page.
 // 'featured' — current role large + prominent, prior roles compact below
 // 'stacked'  — all roles in a vertical list, most-recent-first
-export const TIMELINE_LAYOUT = 'stacked'
+export const TIMELINE_LAYOUT = 'stacked';
 
 export const CONTACT = {
   name: 'Christy Sheppard',
@@ -38,10 +38,13 @@ export const CONTACT = {
   // Phone is on the PDF but intentionally kept off the public site by default
   // (spam harvesting). Flip `showPhone` to true in Resume.jsx to render it.
   phone: '804-928-1876',
-  linkedin: { label: '@christinasheppard', href: 'https://www.linkedin.com/in/christinasheppard/' },
+  linkedin: {
+    label: '@christinasheppard',
+    href: 'https://www.linkedin.com/in/christinasheppard/',
+  },
   github: { label: '@cshepscorp', href: 'https://github.com/cshepscorp' },
   site: 'christinasheppard.com',
-}
+};
 
 // Web-only summary — intentionally NOT mirrored in the PDF.
 // Shown on the Home page hero. Edit freely; no PDF sync required.
@@ -53,18 +56,53 @@ export const WEB_SUMMARY =
   'enabling success across the full breadth of a fast-moving insurtech platform. ' +
   "Most recently, I've delivered AI-powered projects, including a conversational " +
   'insurance chat interface built on the Claude API, and ' +
-  'proprietary insurance data models.'
+  'proprietary insurance data models.';
 
 // Skills — categories and ordering exactly as they appear in the PDF.
 export const SKILLS = [
-  { key: 'Frontend', values: ['React', 'Next.js', 'Vite', 'Chakra UI', 'Shadcn UI', 'Tailwind CSS'] },
-  { key: 'Backend', values: ['JavaScript', 'TypeScript', 'Node.js', 'REST APIs', 'Express'] },
+  {
+    key: 'Frontend',
+    values: [
+      'React',
+      'Next.js',
+      'Vite',
+      'Chakra UI',
+      'Shadcn UI',
+      'Tailwind CSS',
+    ],
+  },
+  {
+    key: 'Backend',
+    values: ['JavaScript', 'TypeScript', 'Node.js', 'REST APIs', 'Express'],
+  },
   { key: 'Database', values: ['MongoDB', 'DynamoDB'] },
-  { key: 'Cloud & Infra', values: ['AWS (Amplify, Cognito, CloudWatch, IAM)', 'Infrastructure as Code (SST, AWS CDK)', 'GitHub Actions CI/CD', 'Sentry'] },
-  { key: 'AI / MCP', values: ['Anthropic Claude API', 'MCP (Model Context Protocol)', 'LLM adapter patterns'] },
+  {
+    key: 'Cloud & Infra',
+    values: [
+      'AWS (Amplify, Cognito, CloudWatch, IAM)',
+      'Infrastructure as Code (SST, AWS CDK)',
+      'GitHub Actions CI/CD',
+      'Sentry',
+    ],
+  },
+  {
+    key: 'AI / MCP',
+    values: [
+      'Anthropic Claude API',
+      'MCP (Model Context Protocol)',
+      'LLM adapter patterns',
+    ],
+  },
   { key: 'Testing', values: ['Jest', 'React Testing Library'] },
-  { key: 'Other', values: ['Shopify', 'WordPress', 'Adobe Creative Suite (Photoshop, Illustrator, InDesign)'] },
-]
+  {
+    key: 'Other',
+    values: [
+      'Shopify',
+      'WordPress',
+      'Adobe Creative Suite (Photoshop, Illustrator, InDesign)',
+    ],
+  },
+];
 
 // Experience — each entry mirrors the PDF. Subsections are optional; roles
 // without subsections just use `bullets`. The Richmond.com entry matches the
@@ -81,7 +119,7 @@ export const EXPERIENCE = [
         heading: 'ION Architecture & Partner Implementation',
         note: 'Primary Role',
         bullets: [
-          'Designs and builds Insurance Object Notation (ION™) data models for enterprise carrier partners including Allstate and Aon, translating complex insurance products into Buddy\'s structured data format for digital deployment',
+          "Designs and builds Insurance Object Notation (ION™) data models for enterprise carrier partners including Fortune 500 insurance carriers, translating complex insurance products into Buddy's structured data format for digital deployment",
           'Manages the full ION build process from initial product digitization through partner approval and production launch, including API connectivity for all policy lifecycle events including quoting, binding, endorsements, refunds, emails, and forms',
           'Drives end-to-end resolution of partner implementation challenges, coordinating across internal and external teams to deliver purpose-built solutions and contribute upstream library improvements that strengthen the broader platform',
         ],
@@ -133,14 +171,14 @@ export const EXPERIENCE = [
       'Managed multiple projects and team members simultaneously in a high-paced environment',
     ],
   },
-]
+];
 
 // Earlier-career pointer — the PDF doesn't list this as a structured role.
 export const EARLIER_CAREER = {
   text: 'Earlier career in web content management and digital publishing',
   company: 'Richmond.com / Richmond Times-Dispatch',
   period: 'prior to 2011',
-}
+};
 
 export const EDUCATION = [
   {
@@ -153,4 +191,4 @@ export const EDUCATION = [
     program: 'Imaging and Digital Arts, Animation Track; Art History Minor',
     period: '1999 – 2003',
   },
-]
+];

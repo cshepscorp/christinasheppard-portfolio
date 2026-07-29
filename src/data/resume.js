@@ -119,7 +119,7 @@ export const EXPERIENCE = [
         heading: 'ION Architecture & Partner Implementation',
         note: 'Primary Role',
         bullets: [
-          "Designs and builds Insurance Object Notation (ION™) data models for enterprise carrier partners including Fortune 500 insurance carriers, translating complex insurance products into Buddy's structured data format for digital deployment",
+          "Designs and builds Insurance Object Notation (ION™) data models for Fortune 500 insurance carriers, translating complex insurance products into Buddy's structured data format for digital deployment",
           'Manages the full ION build process from initial product digitization through partner approval and production launch, including API connectivity for all policy lifecycle events including quoting, binding, endorsements, refunds, emails, and forms',
           'Drives end-to-end resolution of partner implementation challenges, coordinating across internal and external teams to deliver purpose-built solutions and contribute upstream library improvements that strengthen the broader platform',
         ],

@@ -112,7 +112,7 @@ export const EXPERIENCE = [
     id: 'buddy_technology',
     company: 'Buddy Technology',
     title: 'Software Developer',
-    period: 'June 2022 – Present',
+    period: 'June 2022 – July 2026',
     current: true,
     subsections: [
       {
